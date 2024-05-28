@@ -41,16 +41,61 @@
     font-size: 1.2rem;
 }
 
-// .graphs-section {
-//  ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
-// }
+.graphs-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.graphs-section p {
+    font-family: AcuminProItalic;
+    font-size: 25px;
+}
+
+.grant-rates-by-office-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grant-rates-by-nationality-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grant-rates-over-time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gr-office-img {
+    width: 320px;
+    height: 165px;
+    margin-bottom: 30px;
+}
+
+.gr-nationality-img {
+    width: 200;
+    height: 175px;
+    margin-bottom: 30px;
+}
+
+.gr-overtime-img {
+    width: 300px;
+    height: 165px;
+    margin-bottom: 30px;
+}
 
 .view-more-data-btn-container {
-    height: 44px;
-    width: 180px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
 }
 
 .middle-section {
@@ -75,11 +120,83 @@
     font-size: 1.4rem;
 }
 
-// .bottom-section {
-//      ADD THIS BACK IN WHEN YOU HAVE A BOTTOM SECTION
-// }
+.data-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: AcuminProItalic;
+}
+
+.data-container h2 {
+    font-weight: bold;
+    font-size: 2.1rem;
+}
+
+.first-data-point-container {
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
+    padding: 50px;
+}
+
+.second-data-point-container {
+
+    word-wrap: break-word;
+    white-space: normal;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.third-data-point-container {
+    word-wrap: break-word;
+    white-space: normal;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 50px;
+    padding: 50px;
+}
+
+.bottom-section h1 {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    font-size: 2.5rem;
+    font-family: AcuminProMediumItalic;
+    font-weight: bold;
+    }
+
+
+    .read-more-btn{
+        display: flex;
+        justify-content: center;
+        border: none;
+    }
+
+    #read-more {
+        background-color: rgb(64, 76, 74);
+        color: rgb(255, 255, 255);
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 
 .back-to-top {
+    display: flex;
+    justify-content: center;
     width: 8%;
     font-size: 1.2rem;
     cursor: pointer;
@@ -127,11 +244,6 @@
         font-size: .85rem;
         width: 85%;
         margin: 0 auto;
-    }
-
-    .graphs-section {
-        display: block;
-        width: 100%;
     }
 
     .grant-rates-by-office-graph-container {
@@ -353,11 +465,6 @@
         font-size: .85rem;
         width: 85%;
         margin: 0 auto;
-    }
-
-    .graphs-section {
-        display: block;
-        width: 100%;
     }
 
     .grant-rates-by-office-graph-container {
