@@ -22,6 +22,7 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import reducer from './state/reducers';
 import { colors } from './styles/data_vis_colors';
+import Auth0ProviderWithHistory from './components/auth0-provider-with-history';
 
 const { primary_accent_color } = colors;
 
@@ -30,7 +31,9 @@ ReactDOM.render(
   <Router>
     <Provider store={store}>
       <React.StrictMode>
-        <App />
+      <Auth0ProviderWithHistory>
+        <App /> 
+        </Auth0ProviderWithHistory>
       </React.StrictMode>
     </Provider>
   </Router>,
