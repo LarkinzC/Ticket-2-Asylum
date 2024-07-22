@@ -7,13 +7,22 @@ import LogoutButton from '../common/LogoutButton';
 import LoginButton from '../common/LoginButton';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Nav } from 'react-bootstrap';
+import ProfilePage from '../ProfilePage';
 
 
 const { primary_accent_color } = colors;
 
 function HeaderContent() {
-  const { isAuthenticated } = useAuth0();
 
+  const { isAuthenticated, user } = useAuth0();
+  const AuthNav = () => {
+    return (
+      <Nav className='justify-content-end' style={{marginLeft: '10px'}}>
+      {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+    </Nav>
+    );
+  };
+ console.log(user);
   return (
     <div
       style={{
@@ -28,16 +37,15 @@ function HeaderContent() {
           <Image width={100} src={Logo} preview={false} alt="HRF logo white" />
         </a>
       </div>
-      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+      <div style={{display: 'flex', justifyContent: 'space-around'}}>
         <Link to="/" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
           Home
         </Link>
         <Link to="/graphs" style={{ color: '#E2F0F7' }}>
           Graphs
         </Link>
-        <Nav >
-          {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-        </Nav>
+        <ProfilePage />
+        <AuthNav />
       </div>
     </div>
   );

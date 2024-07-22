@@ -4,13 +4,12 @@ import { Button } from 'react-bootstrap';
 
 const LogoutButton = () => {
     const { logout } = useAuth0();
-
   return (
     <Button
     onClick={() => logout()}
-    id='LogoutBtn'
-    className='btn-margin'>
-        Log Out
+    id='qsLoginBtn'
+    variant='primary'>
+        Log out
     </Button>
   );
 };
